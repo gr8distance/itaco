@@ -24,7 +24,7 @@ end
 
 * You can do below!
 
-```
+```elixir
 User.find(1) # => SELECT * FROM accounts WHERE id = 1
 
 User.all # => SELECT * FROM accounts
