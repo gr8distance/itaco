@@ -49,20 +49,20 @@ defmodule Itaco do
         Repo.insert_all(unquote(schema), changesets, opts)
       end
 
-      def update(account, attr) do
-        account
+      def update(entity, attr) do
+        entity
         |> unquote(schema).changeset(attr)
         |> Repo.update()
       end
 
-      def update!(account, attr) do
-        account
+      def update!(entity, attr) do
+        entity
         |> unquote(schema).changeset(attr)
         |> Repo.update!()
       end
 
-      def delete(account), do: Repo.delete(account)
-      def delete!(account), do: Repo.delete!(account)
+      def delete(entity), do: Repo.delete(entity)
+      def delete!(entity), do: Repo.delete!(entity)
 
       def delete_all(), do: Repo.delete_all(unquote(schema))
     end
